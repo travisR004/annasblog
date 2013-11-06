@@ -7,3 +7,30 @@ If you are interested in this T-Shirt, please provide your name, email address a
 
 This is not a contract to purchase, simply an expression of interest!
 </p>
+
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for(@user) do |f| %>
+    <%= render 'shared/error_messages' %>
+
+			<%= f.label :name%>
+			<%= f.text_field :name%>
+
+			<%= f.label :email %>
+      		<%= f.text_field :email %>
+
+       <%= f.label :zip_code %>
+         <%= f.text_field :zip_code %>
+
+     		 <%= f.label :password %>
+      		<%= f.password_field :password %>
+
+      		<%= f.label :password_confirmation, "Confirmation" %>
+     		 <%= f.password_field :password_confirmation %>
+
+     		 <%= f.submit "Create my account" , class: "btn btn-large btn-primary" %>
+     		 <%end%>
+
+     </div>
+</div>
+
