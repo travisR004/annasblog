@@ -1,12 +1,5 @@
 <% provide(:title, 'Sign up') %>
 <h1>Sign up</h1>
-<p>
-If you are interested in this T-Shirt, please provide your name, email address and zip code.</p>
-
-<p>
-
-This is not a contract to purchase, simply an expression of interest!
-</p>
 
 <div class="row">
 	<div class="span6 offset3">
@@ -27,6 +20,7 @@ This is not a contract to purchase, simply an expression of interest!
 
       		<%= f.label :password_confirmation, "Confirmation" %>
      		 <%= f.password_field :password_confirmation %>
+
 
      		 <%= f.submit "Create my account" , class: "btn btn-large btn-primary" %>
      		 <%end%>
