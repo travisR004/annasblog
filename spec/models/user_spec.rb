@@ -1,11 +1,9 @@
 require 'spec_helper'
 
 describe User do
-
-
-
-  	before do
-   		@user = User.new(name: "Example User", email: "user@example.com", password: "foobar" , password_confirmation: "foobar")
+    
+    before do
+   		@user = User.new(name: "Example User", email: "user@example.com", zip_code: "11111", password: "foobar" , password_confirmation: "foobar")
     end
 
 
@@ -13,17 +11,20 @@ describe User do
 
     subject { @user } 
 
-  	it { should respond_to(:name)}
-  	it { should respond_to(:email)}
-    it { should respond_to(:password_digest)}
-    it { should respond_to(:password)}
-    it { should respond_to(:password_confirmation)}
-    it { should respond_to(:authenticate)}
+  	it { should respond_to(:name)                  }
+  	it { should respond_to(:email)                 }
+    it { should respond_to(:password_digest)       }
+    it { should respond_to(:password)              }
+    it { should respond_to(:password_confirmation) }
+    it { should respond_to(:authenticate)          }
 
 
   	it { should be_valid }
 
-
+    describe "remember token" do
+      before { @user.save }
+      its(:remember_token) {should_not be_blank}
+    end
 
 
   	describe "when name is not present" do
@@ -47,15 +48,14 @@ describe User do
       it {should_not be_valid}
     end
 
-    describe "when an email isn't downcased"
+    describe "when an email isn't downcased" do
       let(:mixed_case_email) { "Foo@ExAMPLe.Com"}
       it "should be saved as lowercase" do
         @user.email=mixed_case_email
         @user.save
         expect(@user.reload.email).to eq mixed_case_email.downcase
       end  
-    end 
-
+    end
 
 
     describe "when an email is not unique" do
@@ -79,9 +79,6 @@ describe User do
     end
 
 
-
-
-
     describe "password confirmation fail" do 
       before { @user.password_confirmation="mismatch"}
       it {should_not be_valid}
@@ -95,10 +92,6 @@ describe User do
       before { @user.password = @user.password_confirmation="a"*5}
       it {should be_invalid }
     end
-
-
-
-
 
 
     describe "return value of authenticate method" do
@@ -115,11 +108,5 @@ describe User do
 
         specify { expect(user_for_invalid_password).to be_false }
       end
-
-
     end
-
-
-
-
- end
+  end
