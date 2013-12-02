@@ -1,13 +1,19 @@
-<div class="center hero-unit"><h1>Check out the new T-Shirt featuring Waka Flocka</h1>
+<div class="center hero-unit">
+	<h1>Human Traffic</h1>
+<h2>These posts are designed to bring awareness to and inform people about human traficking here in the United States</h2>
 
-<h2>
-	Welcome to the image page! If you're interested in signing up please click on the link below the image
-</h2>
+
 <h3>
-<%= link_to image_tag("chewbacca.jpg", alt: "Chewbacca"), 'http://starwars.com' %>
+<%= link_to image_tag("help_me.jpg", alt: "Human Traficc"), 'http://humantrafic.com' %>
 </h3>
-<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+<div align="left">
+	
+  <% @posts.each do |post| %>
+        <h4><%= post.title %></h4>
+        <p><%= post.content %></p>
+        <br><br><br><p>--------------------------------------------------------------------------------</p><br><br><br>
+    <% end %>
 
 </div>
 
-
+  
