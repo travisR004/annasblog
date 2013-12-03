@@ -1,5 +1,7 @@
 SampleApp::Application.routes.draw do
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
   root 'static_pages#home'
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'

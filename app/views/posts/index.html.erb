@@ -4,5 +4,7 @@
  <% @posts.each do |post| %> 
         <h4><%= post.title %></h4>
         <p><%= post.content %></p>
+        <%= link_to 'Comment', post %>
+        
         <br><br><br><p>--------------------------------------------------------------------------------</p><br><br><br>
     <% end %> 
