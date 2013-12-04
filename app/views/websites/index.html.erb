@@ -1,0 +1,11 @@
+<h1> Helpful Links</h1>
+
+
+<% @websites.each do |website| %> 
+       	<%= auto_link(website.link) %>
+        <p><%= website.description %></p>
+        
+        <br><br><br>
+        <hr color="#000000" size="5">
+        <br><br><br>
+    <% end %> 

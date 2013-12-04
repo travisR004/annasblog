@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131203175935) do
+ActiveRecord::Schema.define(version: 20131204223048) do
 
   create_table "blogposts", force: true do |t|
     t.string   "content"
@@ -29,6 +29,13 @@ ActiveRecord::Schema.define(version: 20131203175935) do
   end
 
   add_index "comments", ["post_id"], name: "index_comments_on_post_id"
+
+  create_table "links", force: true do |t|
+    t.string   "link"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "posts", force: true do |t|
     t.string   "name"
@@ -50,5 +57,12 @@ ActiveRecord::Schema.define(version: 20131203175935) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"
+
+  create_table "websites", force: true do |t|
+    t.string   "link"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
