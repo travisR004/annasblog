@@ -20,6 +20,8 @@ http_basic_authenticate_with :name => "Anna", :password => "Banana", :except => 
     end
   end
 
+
+
   # GET /posts/new
   def new
     @post = Post.new

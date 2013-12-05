@@ -12,7 +12,15 @@ class StaticPagesController < ApplicationController
   def contact
   end
 
-  def link
+  def admin
+  end
+
+  def deleteable
+    @posts=Post.all
+  end
+
+  def erase_link
+    @websites=Website.all
   end
   
 end

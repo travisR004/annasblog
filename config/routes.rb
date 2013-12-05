@@ -8,9 +8,12 @@ SampleApp::Application.routes.draw do
   resources :links
   
   root 'static_pages#home'
-  match '/help',    to: 'static_pages#help',    via: 'get'
-  match '/about',   to: 'static_pages#about',   via: 'get'
-  match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/erase_link',  to: 'static_pages#erase_link',     via: 'get'
+  match '/deleteable',  to: 'static_pages#deleteable',     via: 'get'
+  match '/help',        to: 'static_pages#help',           via: 'get'
+  match '/about',       to: 'static_pages#about',          via: 'get'
+  match '/contact',     to: 'static_pages#contact',        via: 'get'
+  match '/admin',       to: 'static_pages#admin',          via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

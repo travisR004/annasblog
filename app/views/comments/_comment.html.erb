@@ -8,4 +8,10 @@
   <%= comment.body %>
 </p>
 
+<p>
+  <%= link_to 'Delete', [comment.post, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
+
 <hr size="3" color="#000000">
