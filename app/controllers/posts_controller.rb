@@ -66,7 +66,7 @@ http_basic_authenticate_with :name => "Anna", :password => "Banana", :except => 
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url }
+      format.html { redirect_to admin_url }
       format.json { head :no_content }
     end
   end
