@@ -7,14 +7,12 @@
 <%= link_to image_tag("help_me.jpg", alt: "Human Traficc"), 'http://humantrafic.com' %>
 </h3>
 <div align="left">
-	
-
+<% if @posts!=nil %>
         <h4><%= @posts.title %></h4>
         <p><%= @posts.content %></p>
         <br><br><hr><br>
-   
+   <% end %>
    <%= link_to "Read the rest of the posts here!", posts_path %>
-
 </div>
 
   
