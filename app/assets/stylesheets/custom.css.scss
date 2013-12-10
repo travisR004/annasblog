@@ -13,7 +13,9 @@ $grayMediumLight: #eaeaea;
 }
 
 
-
+body {
+  padding: 60px;
+}
 
 @media (max-width: 600px) {
 .hero-unit h1 {
@@ -23,6 +25,8 @@ $grayMediumLight: #eaeaea;
   letter-spacing: -5px;
   color: inherit;
 }
+
+body {padding: 0px;}
 }
 
 
@@ -100,8 +104,7 @@ html {
   overflow-y: scroll;
 }
 
-body {
-}
+
 
 section {
   overflow: auto;
