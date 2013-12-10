@@ -1,4 +1,9 @@
 @import "bootstrap";
+
+body {
+  padding-top: 60px;
+}
+
 @import "bootstrap-responsive";
 
 /* mixins, variables, etc. */
@@ -23,6 +28,8 @@ $grayMediumLight: #eaeaea;
   letter-spacing: -5px;
   color: inherit;
 }
+
+body {padding-top: 0px;}
 
 }
 
@@ -101,9 +108,7 @@ html {
   overflow-y: scroll;
 }
 
-body {
-  padding-top: 60px;
-}
+
 
 section {
   overflow: auto;
