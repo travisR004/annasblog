@@ -1,7 +1,12 @@
 <h1>Posts</h1>
-
+<div align="center">
+<%= will_paginate @posts, :page_links => false %>
+</div>
+<br><br>
  <% @posts.each do |post| %> 
+ 	<div align="center">
         <h4 ><%= post.title %></h4>
+    </div>
         <p><%= post.content %></p>
         <%= link_to 'Comment', post %>
         

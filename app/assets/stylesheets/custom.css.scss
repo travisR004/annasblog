@@ -180,6 +180,10 @@ aside {
 
 /* header */
 
+.navbar-inverse .btn-navbar{
+  color: #fff;
+}
+
 #logo {
   float: left;
   margin-right: 10px;
@@ -224,4 +228,5 @@ footer {
  
 }
 
+.navbar-inverse .btn-navbar {background: #fff;}
 

@@ -10,8 +10,9 @@
 <% if @posts!=nil %>
         <h4><%= @posts.title %></h4>
         <p><%= @posts.content %></p>
-        <br><br><hr><br>
+        
    <% end %>
+   <br><br><hr><br>
    <%= link_to "Read the rest of the posts here!", posts_path %>
 </div>
 

@@ -6,7 +6,7 @@ http_basic_authenticate_with :name => "Anna", :password => "Banana", :except => 
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all(:order => "created_at DESC")
+    @posts = Post.all.paginate(:page => params[:page], :per_page => 5, :order => "created_at DESC")
   end
 
   # GET /posts/1
