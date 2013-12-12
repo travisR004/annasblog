@@ -6,6 +6,8 @@ gem 'bootstrap-sass'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'rails_autolink'
 gem 'will_paginate', '~> 3.0'
+gem 'newrelic_rpm'
+
 
 group :development, :test do
 
